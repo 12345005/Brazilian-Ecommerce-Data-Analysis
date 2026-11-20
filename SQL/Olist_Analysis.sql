@@ -128,7 +128,7 @@ from order_reviews
 
 select count(*) as total_rows,
        count(seller_id) as seller_id,
-       count(seller_zip_code_prefix) asseller_zip_code_prefix,
+       count(seller_zip_code_prefix) as seller_zip_code_prefix,
        count(seller_city) as seller_city,
        count(seller_state) as seller_state
 from sellers
@@ -142,7 +142,7 @@ from category
 
 
 select count(*) as total_rows,
-       count(geolocation_zip_code_prefix) asgeolocation_zip_code_prefix ,
+       count(geolocation_zip_code_prefix) as geolocation_zip_code_prefix ,
        count(geolocation_lat) as geolocation_lat,
        count(geolocation_lng) as geolocation_lng,
        count(geolocation_city) as geolocation_city,
@@ -343,7 +343,7 @@ from order_items
 select *
 from order_items_analysis
 
-create view osrder_payments_analysis as
+create view order_payments_analysis as
 select *
 from order_payments
 
